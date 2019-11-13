@@ -56,8 +56,9 @@ public class App
         System.out.println("Car 2 name: " + car2.name);
         System.out.println("Car 3 name: " + car3.name);
 
-        Car car4 = null;
-        System.out.println(car4.name);
+//        example for nullPointerException
+//        Car car4 = null;
+//        System.out.println(car4.name);
 
     }
 }
