@@ -34,6 +34,14 @@ public class App
         System.out.println(carReference.engine.capacity);
         System.out.println("................................");
 
+        double accelerationDistance = carReference.accelerate(60, 1);
+        System.out.println("Acceleration Distance " + accelerationDistance);
+
+        Mechanic mechanic =  new Mechanic();
+        mechanic.repairVehicle(carReference);
+
+        System.out.println("Total Traveled Distance after repair: " + carReference.traveledDistance);
+
         Car car2 = new Car();
         car2.name = "Ford";
         car2.color = null;
