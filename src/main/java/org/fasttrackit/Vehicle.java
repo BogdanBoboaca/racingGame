@@ -4,6 +4,9 @@ import java.time.LocalDate;
 
 public class Vehicle {
 
+    //class variable
+    static int totalCount;
+
     //instance variables
 
     String name;
@@ -14,6 +17,9 @@ public class Vehicle {
     double traveledDistance;
     boolean running;
 
+    public Vehicle() {
+        totalCount ++;
+    }
 
     // semnatura metodei
     public double accelerate(double speed, double durationInHours) {
