@@ -21,12 +21,18 @@ public class App
 
 
         Car carReference = new Car (carEngine);
-        carReference.name = "Dacia";
-        carReference.color = "Red";
-        carReference.mileage = 9.8;
-        carReference.fuelLevel = 60;
-        carReference.maxSpeed = 200;
-        carReference.running = false;
+        //carReference.name = "Dacia";
+        carReference.setName("Dacia");
+        //carReference.color = "Red";
+        carReference.setColor("Red");
+        //carReference.mileage = 9.8;
+        carReference.setMileage(9.8);
+        //carReference.fuelLevel = 60;
+        carReference.setFuelLevel(60);
+        //carReference.maxSpeed = 200;
+        carReference.setMaxSpeed(200);
+        //carReference.running = false;
+        carReference.setRunning(false);
         carReference.doorCount = 2;
 
 
@@ -42,12 +48,12 @@ public class App
         Mechanic mechanic =  new Mechanic();
         mechanic.repairVehicle(carReference);
 
-        System.out.println("Total Traveled Distance after repair: " + carReference.traveledDistance);
+        System.out.println("Total Traveled Distance after repair: " + carReference.getTraveledDistance());
 
         Car car2 = new Car(carEngine2);
-        car2.name = "BMW";
-        car2.color = null;
-        car2.mileage = 10;
+        car2.setName("BMW");
+        car2.setColor("Blue");
+        car2.setMileage(10);
         //car2.fuelLevel = 70;
 
         System.out.println("Engine Details 2 ...");
@@ -56,32 +62,32 @@ public class App
         System.out.println("................................");
 
         // concatenation - lipirea 2 Stringuri
-        System.out.println("First car Name: " + carReference.name);
-        System.out.println("First car Color: " + carReference.color);
-        System.out.println("First car Mileage: " + carReference.mileage);
-        System.out.println("First car Fuel Level: " + carReference.fuelLevel);
-        System.out.println("First car Travel Distance: " + carReference.traveledDistance);
-        System.out.println("First car Max Speed: " + carReference.maxSpeed);
-        System.out.println("First car Running: " + carReference.running);
+        System.out.println("First car Name: " + carReference.getName());
+        System.out.println("First car Color: " + carReference.getColor());
+        System.out.println("First car Mileage: " + carReference.getMileage());
+        System.out.println("First car Fuel Level: " + carReference.getFuelLevel());
+        System.out.println("First car Travel Distance: " + carReference.getTraveledDistance());
+        System.out.println("First car Max Speed: " + carReference.getMaxSpeed());
+        System.out.println("First car Running: " + carReference.isRunning());
         System.out.println("First car Door Numbers: " + carReference.doorCount);
 
 
-        System.out.println("Second car Name: " + car2.name);
-        System.out.println("Second car Color: " + car2.color);
-        System.out.println("Second car Mileage: " + car2.mileage);
-        System.out.println("Second car Fuel Level: " + car2.fuelLevel);
-        System.out.println("Second car Travel Distance: " + car2.traveledDistance);
-        System.out.println("Second car Max Speed: " + car2.maxSpeed);
-        System.out.println("Second car Running: " + car2.running);
+        System.out.println("Second car Name: " + car2.getName());
+        System.out.println("Second car Color: " + car2.getColor());
+        System.out.println("Second car Mileage: " + car2.getMileage());
+        System.out.println("Second car Fuel Level: " + car2.getFuelLevel());
+        System.out.println("Second car Travel Distance: " + car2.getTraveledDistance());
+        System.out.println("Second car Max Speed: " + car2.getMaxSpeed());
+        System.out.println("Second car Running: " + car2.isRunning());
         System.out.println("Second car Door Numbers: " + car2.doorCount);
 
-        car2.name = "VW";
-        System.out.println(car2.name);
+        car2.setName("VW");
+        System.out.println(car2.getName());
 
         Car car3 = car2;
-        car3.name = "Audi";
-        System.out.println("Car 2 name: " + car2.name);
-        System.out.println("Car 3 name: " + car3.name);
+        car3.setName("Audi");
+        System.out.println("Car 2 name: " + car2.getName());
+        System.out.println("Car 3 name: " + car3.getName());
 
 //        example for nullPointerException
 //        Car car4 = null;
