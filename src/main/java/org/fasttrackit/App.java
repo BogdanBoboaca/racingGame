@@ -38,7 +38,7 @@ public class App
         System.out.println("................................");
 
 
-        double accelerationDistance = carReference.accelerate(60, 1);
+        double accelerationDistance = carReference.accelerate(130, 1);
         System.out.println("Acceleration Distance " + accelerationDistance);
 
         Mechanic mechanic =  new Mechanic();
