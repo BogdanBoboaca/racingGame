@@ -11,4 +11,9 @@ public class Car extends AutoVehicle{
     }
 
 
+    // Constructor overloading
+    public Car() {
+        this (new Engine());
+
+    }
 }

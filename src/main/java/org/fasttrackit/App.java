@@ -11,6 +11,8 @@ public class App
         Game game = new Game();
         game.start();
 
+        Car carWithDefaultEngine = new Car();
+
         Engine carEngine = new Engine();
         carEngine.manufacturer = "Renault";
         carEngine.capacity = 1.5;
