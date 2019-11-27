@@ -4,8 +4,8 @@ public class Mechanic {
 
     public void repairVehicle(Vehicle vehicle) {
 
-        System.out.println("Repairing vehicle " + vehicle.name);
+        System.out.println("Repairing vehicle " + vehicle.getName());
 
-        vehicle.traveledDistance = 0;
+        vehicle.setTraveledDistance(0);
     }
 }
