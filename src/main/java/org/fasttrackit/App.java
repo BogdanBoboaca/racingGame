@@ -1,17 +1,15 @@
 package org.fasttrackit;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
-
     // one line comment
 
     public static void main( String[] args )
     {
         System.out.println( "Welcome to the Racing Game!" );
+
+        Game game = new Game();
+        game.start();
 
         Engine carEngine = new Engine();
         carEngine.manufacturer = "Renault";
