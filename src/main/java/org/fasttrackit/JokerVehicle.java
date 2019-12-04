@@ -22,4 +22,9 @@ public class JokerVehicle extends Vehicle{
     public JokerVehicle clone() {
         return new JokerVehicle();
     }
+
+    public void fly (){
+        System.out.println("Flying!!!");
+    }
+
 }
