@@ -82,6 +82,12 @@ public class Vehicle {
 
     LocalDate createdDate = LocalDate.now().minusWeeks(2);
 
+    // co-variant return type
+    @Override
+    public Vehicle clone(){
+        return new Vehicle();
+    }
+
     public String getName() {
         return name;
     }
