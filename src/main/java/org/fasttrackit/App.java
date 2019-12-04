@@ -11,9 +11,10 @@ public class App
         Game game = new Game();
         game.start();
 
+
         // Method implementation taken from object's class,
         // not from the variable's class
-
+/*
         Vehicle joker = new JokerVehicle();
         joker.setName("Joker");
         joker.setFuelLevel(80);
@@ -128,6 +129,6 @@ public class App
         System.out.println("Total Vehicle Count form Vehicle 2: " + vehicle2.totalCount);
         System.out.println("Total Vehicle Count form Vehicle Class: " + Vehicle.totalCount);
 
-
+*/
     }
 }
