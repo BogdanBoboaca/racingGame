@@ -11,6 +11,14 @@ public class App
         Game game = new Game();
         game.start();
 
+        //String pull
+//        String a = "test";
+//        String b = "test";
+//        String c = new String("test");
+//
+//        System.out.println(a == b );
+//        System.out.println(a == c );
+//        System.out.println(a.equals(c));
 
         // Method implementation taken from object's class,
         // not from the variable's class
