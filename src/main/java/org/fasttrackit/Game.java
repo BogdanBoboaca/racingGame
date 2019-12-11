@@ -15,14 +15,30 @@ public class Game {
 
         initializeTracks();
         displayTracks();
+        Track selectedTrack = getSelectedTrackFromUser();
         initializeCompetitors();
 
         //enhanced for
         for (Vehicle vehicle : competitors){
             System.out.println("It's " + vehicle.getName() + "'s turn.");
+            double speed = getAccelerationSpeedFromUser();
+
+            vehicle.accelerate(speed);
+
+            if (vehicle.getTraveledDistance() >= selectedTrack.getLength()){
+                System.out.println("the winner is " + vehicle.getName() + "!");
+                break;
+            }
         }
 
     }
+
+    private double getAccelerationSpeedFromUser(){
+        System.out.println("Please enter the acceleration speed");
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextDouble();
+    }
+
 
     private void initializeCompetitors (){
 
@@ -58,6 +74,20 @@ public class Game {
         track2.setLength(337.3);
 
         tracks[1] = track2;
+    }
+
+
+
+    private Track getSelectedTrackFromUser(){
+        System.out.println("Select the track you'd like to play on: ");
+        Scanner scanner = new Scanner(System.in);
+        int selectedTrackNumber = scanner.nextInt();
+
+        Track selectedTrack = tracks[selectedTrackNumber - 1];
+        System.out.println("you chose: " + selectedTrack.getName());
+
+
+        return selectedTrack;
     }
 
     private void displayTracks(){
